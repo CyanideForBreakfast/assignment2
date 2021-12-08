@@ -1,0 +1,12 @@
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+
+[providers]
+	# [providers.file]
+	#   filename = "/etc/traefik/dynamic.toml"
+	[providers.docker]
+		endpoint = "unix://var/run/docker.sock"
+
+[api]
+	insecure = true

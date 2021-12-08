@@ -1,0 +1,8 @@
+[http]
+	[http.routers]
+		[http.routers.go_server_router]
+			entrypoints = ["web"]
+			rule = "PathPrefix('/go_server')"
+			service = "go_server_service"
+	[http.services]	
+		[http.services.go_server_service]
