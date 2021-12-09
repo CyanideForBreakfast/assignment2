@@ -1,6 +1,9 @@
 package main
 
 import (
+	// "fmt"
+	// "math"
+	// "math/rand"
 	"net/http"
 	"os"
 
@@ -15,8 +18,17 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
+
 	e.GET("/", func(c echo.Context) error {
-		return c.HTML(http.StatusOK, "Hello, Docker! <3")
+		/* x := 1 + rand.Float64()
+		str := ""
+		for i := 0; i < 2000000; i++ {
+			x = math.Tan(x)
+			s := fmt.Sprintf("%f", x)
+			str += s
+		} */
+
+		return c.HTML(http.StatusOK, "Hello, assignment 2 Bikash and Utkarsh! <3" /* + str */)
 	})
 
 	e.GET("/ping", func(c echo.Context) error {

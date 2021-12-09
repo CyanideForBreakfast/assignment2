@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   go_server:
-    build: container
+    image: go_server
     # ports:
     #   - "8080:8080"
     labels:
