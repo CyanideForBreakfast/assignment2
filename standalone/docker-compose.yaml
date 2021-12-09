@@ -20,4 +20,4 @@ services:
       - "traefik.http.routers.traefik.entrypoints=web"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./load_balancer:/etc/traefik
+      - ../load_balancer:/etc/traefik
